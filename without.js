@@ -15,17 +15,16 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 const without = function(source, itemsToRemove) {
-  let newResults = [];
-  for (let item of source) {
-    for (let remove of itemsToRemove) {
-      if (item !== remove) {
-        if (typeof item === typeof remove) {
-          newResults.push(item);
+  let newResults = source;
+  for (var i = 0; i < source.length; i++) {
+    for (var j = 0; j < itemsToRemove.length; j++) {
+      if (source[i] === itemsToRemove[j]) {
+        newResults.splice(i, 1);
         }
       }
-    }
-  } return console.log(newResults);
-};
+    } return console.log(newResults);
+  } 
+
 
 without([1, 2, 3], [1]); // => [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]);
