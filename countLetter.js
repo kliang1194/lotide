@@ -15,9 +15,12 @@ const countLetters = function(sentence) {
       } else {
         results[letter] = 1;
       }
-    } 
+    } //console.log(letter); 
+    //console.log(results[letter]);
   } console.log(results);
   return results;
 }
 
-countLetters("Hello");
+countLetters("Lighthouse Labs");
+
+module.exports = countLetters; 

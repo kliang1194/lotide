@@ -30,3 +30,5 @@ const assertArraysEqual = function(arr1, arr2) {
 assertArraysEqual(letterPositions("hello").l, [2, 3]);
 
 console.log(letterPositions("hello"));
+
+module.exports = letterPositions;

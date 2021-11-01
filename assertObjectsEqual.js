@@ -1,11 +1,11 @@
 const eqObjects = function(object1, object2) {
-  const arrayObject1 = Object.keys(object1);
+  const arrayObject1 = Object.keys(object1); //generates an array of the keys in objects 1 and 2 
   const arrayObject2 = Object.keys(object2);
   if (arrayObject1.length !== arrayObject2.length) {
-    return false;
+    return false; // if the number of keys in each array of keys is not the same, the objects are different. 
   } else {
-    for (let arr1 of arrayObject1) {
-      let newArray1 = object1[arr1];
+    for (let arr1 of arrayObject1) { 
+      let newArray1 = object1[arr1]; // newArray1 = value of that key in object1 
       let newArray2 = object2[arr1];
       if (Array.isArray(newArray1) && Array.isArray(newArray2)) {
         return eqArrays(newArray1, newArray2);
@@ -13,7 +13,7 @@ const eqObjects = function(object1, object2) {
         if (newArray1 !== newArray2) {
           return false;
         }
-      }
+      } 
     } return true;
   }
 };
@@ -41,4 +41,6 @@ const assertObjectsEqual = function(actual, expected) {
 };
 
 
-assertObjectsEqual({a: 12, b: "3"}, {b: "3", a: 1});
+assertObjectsEqual({a: 12, b: "3"}, {b: 3, a: 12});
+
+module.exports = assertObjectsEqual;

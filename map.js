@@ -28,3 +28,5 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 console.log(assertArraysEqual(result1, ['g', 'c', 't', 'm', 't']));
+
+module.exports = map;
